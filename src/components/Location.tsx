@@ -3,7 +3,8 @@
 import { useRef } from "react";
 import { ArrowUpRight, Clock, MapPin, Phone } from "lucide-react";
 import { gsap, useGSAP, MOTION_OK } from "@/lib/gsap";
-import { ADDRESS_LINES, HOURS, MAPS_EMBED, MAPS_LINK, PHONE_DISPLAY, WA_HERO } from "@/lib/data";
+import { FacebookIcon, InstagramIcon } from "./SocialIcons";
+import { ADDRESS_LINES, FACEBOOK_URL, HOURS, INSTAGRAM_URL, MAPS_EMBED, MAPS_LINK, PHONE_DISPLAY, WA_HERO } from "@/lib/data";
 
 export default function Location() {
   const root = useRef<HTMLElement>(null);
@@ -81,6 +82,26 @@ export default function Location() {
                 {PHONE_DISPLAY}
               </a>
               <p className="mt-2 text-xs text-white/55">Atendimento por hora marcada. Agende e receba o orçamento.</p>
+              <div className="mt-5 flex gap-3 border-t border-white/10 pt-5">
+                <a
+                  id="loc-instagram"
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/25 px-4 py-2 text-xs uppercase tracking-[0.14em] transition hover:border-accent hover:text-accent"
+                >
+                  <InstagramIcon size={16} /> Instagram
+                </a>
+                <a
+                  id="loc-facebook"
+                  href={FACEBOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/25 px-4 py-2 text-xs uppercase tracking-[0.14em] transition hover:border-accent hover:text-accent"
+                >
+                  <FacebookIcon size={16} /> Facebook
+                </a>
+              </div>
             </div>
           </div>
 

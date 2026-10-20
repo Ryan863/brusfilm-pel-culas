@@ -1,6 +1,7 @@
 import { ArrowUpRight, MapPin, MessageCircle, Phone } from "lucide-react";
 import Logo from "./Logo";
-import { MAPS_LINK, NAV_LINKS, PHONE_DISPLAY, WA_HERO } from "@/lib/data";
+import { FacebookIcon, InstagramIcon } from "./SocialIcons";
+import { FACEBOOK_URL, INSTAGRAM_URL, MAPS_LINK, NAV_LINKS, PHONE_DISPLAY, WA_HERO } from "@/lib/data";
 
 export default function Footer() {
   return (
@@ -14,6 +15,28 @@ export default function Footer() {
                 Películas automotivas, residenciais e de segurança com acabamento premium em
                 Brusque - SC.
               </p>
+              <div className="mt-6 flex gap-3">
+                <a
+                  id="footer-instagram"
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram da Brusfilm"
+                  className="grid size-11 place-items-center rounded-full border border-line text-white/70 transition hover:border-accent hover:text-accent"
+                >
+                  <InstagramIcon />
+                </a>
+                <a
+                  id="footer-facebook"
+                  href={FACEBOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook da Brusfilm"
+                  className="grid size-11 place-items-center rounded-full border border-line text-white/70 transition hover:border-accent hover:text-accent"
+                >
+                  <FacebookIcon />
+                </a>
+              </div>
             </div>
             <nav aria-label="Rodapé">
               <p className="mb-5 text-xs uppercase tracking-[0.22em] text-white/40">Navegação</p>

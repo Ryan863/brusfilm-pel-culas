@@ -1,3 +1,6 @@
+export const INSTAGRAM_URL = "https://www.instagram.com/brusfilm/";
+export const FACEBOOK_URL = "https://www.facebook.com/p/Brusfilm-Peliculas-100092388490080/";
+
 export const PHONE_DISPLAY = "+55 (47) 99978-9738";
 export const WA_NUMBER = "5547999789738";
 

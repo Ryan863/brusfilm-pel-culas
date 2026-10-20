@@ -22,7 +22,7 @@ export default function Hero() {
           delay: 0.15,
         });
         gsap.to(bg.current, {
-          yPercent: 15,
+          yPercent: 8,
           ease: "none",
           scrollTrigger: {
             trigger: root.current,
@@ -42,15 +42,15 @@ export default function Hero() {
       ref={root}
       className="relative flex h-svh min-h-[640px] items-center overflow-hidden"
     >
-      {/* Fundo imersivo com parallax */}
-      <div ref={bg} className="absolute inset-x-0 -top-[25%] h-[130%] will-change-transform">
+      {/* Fundo imersivo com parallax. No desktop a foto é mostrada inteira (sem zoom) à direita, fundindo com o fundo escuro */}
+      <div ref={bg} className="absolute inset-x-0 -top-[10%] h-[120%] bg-ink will-change-transform">
         <picture>
           <source media="(min-width: 768px)" srcSet="/images/hero-desktop.jpg" />
           <img
             src="/images/hero-mobile.jpg"
             alt="Veículo esportivo em estúdio com iluminação azul, representando o acabamento premium das películas Brusfilm"
             fetchPriority="high"
-            className="size-full object-cover object-[70%_center] md:object-right"
+            className="size-full object-cover object-[70%_center] md:object-contain md:object-right md:[mask-image:linear-gradient(to_right,transparent_0%,#000_28%),linear-gradient(to_bottom,transparent_0%,#000_18%,#000_82%,transparent_100%)] md:[mask-composite:intersect] md:[-webkit-mask-composite:source-in]"
           />
         </picture>
       </div>
